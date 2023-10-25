@@ -6,19 +6,7 @@ const DOMSelectors = {
     //grab ALL the h2s
     h2s:document.querySelectorAll("h2"),
 };
-function maketest(){
-    console.log(DOMSelectors)
-    return DOMSelectors;
-};
 
-function addnote(test){
-    document
-        .querySelector(".test")
-        .insertAdjacentHTML(
-            "afterbegin",
-            '<div class="card"><div class="card-title">${test.name}</div></div>'
-        )
-}
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.firstname.value);
@@ -26,6 +14,10 @@ DOMSelectors.form.addEventListener("submit", function(event){
         (el) => el.textContent = DOMSelectors.firstname.value
     );
     document.getElementById("form").reset();
+    document.getElementsByClassName("insert").insertAdjacentHTML(
+            "afterbegin",
+            '<div class="card"><div class="card-title">${test.name}</div></div>'
+        )
 });
 console.log(DOMSelectors.firstname);
 console.log(DOMSelectors.h2s);
