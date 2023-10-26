@@ -5,11 +5,11 @@ const DOMSelectors = {
     //grab the text input
     //grab ALL the h2s
     h2s:document.querySelectorAll("h2"),
+    resetbutton: document.querySelector("#reset"),
+    funnybutton: document.querySelector("#funny")
 };
-function maketest(){
-    console.log(DOMSelectors)
-    return DOMSelectors;
-};
+console.log(DOMSelectors.firstname);
+console.log(DOMSelectors.h2s);
 
 function addnote(test){
     document
@@ -27,6 +27,13 @@ DOMSelectors.form.addEventListener("submit", function(event){
     );
     document.getElementById("form").reset();
 });
-console.log(DOMSelectors.firstname);
-console.log(DOMSelectors.h2s);
-
+DOMSelectors.resetbutton.addEventListener("click", function(clear){
+    clear.preventDefault();
+    DOMSelectors.h2s.forEach(
+        (el)=> el.textContent = "" );
+});
+DOMSelectors.funnybutton.addEventListener("click", function(funny){
+    funny.preventDefault();
+    DOMSelectors.h2s.forEach((value)=> 
+        value.insertAdjacentHTML("afterbegin", "you pressed WHAT?!"));
+});
