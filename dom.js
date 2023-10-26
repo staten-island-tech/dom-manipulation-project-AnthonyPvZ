@@ -6,7 +6,9 @@ const DOMSelectors = {
     //grab ALL the h2s
     h2s:document.querySelectorAll("h2"),
     resetbutton: document.querySelector("#reset"),
-    funnybutton: document.querySelector("#funny")
+    funnybutton: document.querySelector("#funny"),
+    card: document.querySelector(".card-title"),
+    resetfun: document.querySelectorAll("#resetfunny")
 };
 
 console.log(DOMSelectors.firstname);
@@ -18,18 +20,19 @@ DOMSelectors.form.addEventListener("submit", function(event){
         (el) => el.textContent = DOMSelectors.firstname.value
     );
     document.getElementById("form").reset();
-    document.getElementsByClassName("insert").insertAdjacentHTML(
-            "afterbegin",
-            '<div class="card"><div class="card-title">${test.name}</div></div>'
-        )
 });
 DOMSelectors.resetbutton.addEventListener("click", function(clear){
     clear.preventDefault();
     DOMSelectors.h2s.forEach(
-        (el)=> el.textContent = "" );
+        (el)=> el.textContent = "");
 });
 DOMSelectors.funnybutton.addEventListener("click", function(funny){
     funny.preventDefault();
     DOMSelectors.h2s.forEach((value)=> 
-        value.insertAdjacentHTML("afterbegin", "you pressed WHAT?!"));
+        value.insertAdjacentHTML("afterend", '<div class="card"><div class="card-title">return the slab</div></div>'));
 });
+DOMSelectors.resetfun.addEventListener("click", function(removecard){
+    removecard.preventDefault();
+    DOMSelectors.card.textContent = "";
+});
+// use removechild
