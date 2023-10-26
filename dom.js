@@ -10,15 +10,6 @@ const DOMSelectors = {
 };
 console.log(DOMSelectors.firstname);
 console.log(DOMSelectors.h2s);
-
-function addnote(test){
-    document
-        .querySelector(".test")
-        .insertAdjacentHTML(
-            "afterbegin",
-            '<div class="card"><div class="card-title">${test.name}</div></div>'
-        )
-}
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.firstname.value);
