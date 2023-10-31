@@ -7,12 +7,13 @@ const DOMSelectors = {
     h2s:document.querySelectorAll("h2"),
     resetbutton: document.querySelector("#reset"),
     funnybutton: document.querySelector("#funny"),
-    cards: document.querySelector(".card"),
-    resetfun: document.querySelector("#resetfunny")
+    cards: document.querySelectorAll(".card"),
+    resetfun: document.querySelector("#resetfunny"),
 };
 
 console.log(DOMSelectors.firstname);
 console.log(DOMSelectors.h2s);
+console.log(DOMSelectors.cards)
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.firstname.value);
@@ -33,9 +34,8 @@ DOMSelectors.funnybutton.addEventListener("click", function(funny){
 });
 DOMSelectors.resetfun.addEventListener("click", function(reset){
     reset.preventDefault();
-    DOMSelectors.h2s.forEach(
-        (el)=> el.removeClass(card)
-    );
+    DOMSelectors.cards.removeAttributeNS("return the slab")
 });
 // https://stackoverflow.com/questions/4777077/removing-elements-by-class-name
+
 
