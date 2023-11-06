@@ -44,18 +44,18 @@ DOMSelectors.resetfun.addEventListener("click", function(reset){
 //     console.log(i);
 //     i++;
 // };
-function linearSearch(num,arr){
-    let found;
-    //for loop is iteration
-    for(let i=0; i < arr.length; i++){
-        //evaluations if statements, are selection
-        if (arr[i]=== num){
-            found = arr[i]
-            break;
-        } else{
-            console.log("still lookiong");
-        }
-    } if(found =null) {console.log("sorry no");}
-    else{console.log(found);} return found;
-}
-linearSearch (5, numsArr)
+// function linearSearch(num,arr){
+//     let found;
+//     //for loop is iteration
+//     for(let i=0; i < arr.length; i++){
+//         //evaluations if statements, are selection
+//         if (arr[i]=== num){
+//             found = arr[i]
+//             break;
+//         } else{
+//             console.log("still lookiong");
+//         }
+//     } if(found =null) {console.log("sorry no");}
+//     else{console.log(found);} return found;
+// }
+// linearSearch (5, numsArr)
