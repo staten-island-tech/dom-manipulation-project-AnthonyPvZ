@@ -8,11 +8,12 @@ const DOMSelectors = {
     resetbutton: document.querySelector("#reset"),
     funnybutton: document.querySelector("#funny"),
     cards: document.querySelectorAll(".card"),
+    // remove: document.querySelectorAll("#resetfunny")
 };
 
 console.log(DOMSelectors.firstname);
 console.log(DOMSelectors.h2s);
-console.log(DOMSelectors.cards)
+
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.firstname.value);
@@ -29,8 +30,21 @@ DOMSelectors.resetbutton.addEventListener("click", function(clear){
 DOMSelectors.funnybutton.addEventListener("click", function(funny){
     funny.preventDefault();
     DOMSelectors.h2s.forEach((value)=> 
-        value.insertAdjacentHTML("beforeend", '<div class="card"><div class="card-title">return the slab</div></div>'));
+        value.insertAdjacentHTML("beforeend", 
+        `<div class="card">
+        <div class="card-title">return the slab</div>
+        <button type="button" class="resetfunny">Click to clear funny</button>
+        </div>`));
+        document.querySelectorAll(".resetfunny").forEach((remov)=>{
+    remov.addEventListener("click", function(erase){
+    erase.target.parentElement.remove()
+})
 });
+
+
+});
+
+// https://stackoverflow.com/questions/4777077/removing-elements-by-class-name
 function removefunny(){
     let buttons = document.querySelectorAll("button");
     buttons.forEach((btn)=>
@@ -39,6 +53,3 @@ function removefunny(){
     }))
 };
 removefunny();
-
-
-// https://stackoverflow.com/questions/4777077/removing-elements-by-class-name
