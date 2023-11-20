@@ -24,6 +24,7 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 });
 DOMSelectors.resetbutton.addEventListener("click", function (clear) {
     clear.preventDefault();
+    DOMSelectors.h1s.forEach((el)=>el.textContent = "");
     DOMSelectors.h2s.forEach(
         (el) => el.textContent = "");
 });
