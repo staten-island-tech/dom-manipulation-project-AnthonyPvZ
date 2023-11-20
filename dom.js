@@ -18,7 +18,7 @@ DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log(DOMSelectors.firstname.value);
     DOMSelectors.h1s.forEach(
-        (el) => el.textContent = DOMSelectors.firstname.value
+        (el) => el.textContent = "Hello" + " " + DOMSelectors.firstname.value + " " + "welcome back to Sunrust Zombie Survival!"
     );
     document.getElementById("form").reset();
 });
@@ -32,7 +32,7 @@ DOMSelectors.funnybutton.addEventListener("click", function (funny) {
     DOMSelectors.h2s.forEach((value) =>
         value.insertAdjacentHTML("beforeend",
             `<div class="card">
-        <div class="card-title">Submitted by Triv Triv Boy</div>
+        <div class="card-title">This week's clip was submitted by Triv Triv Boy</div>
         <video controls width="1000" src="Darth_Vader.mp4" type="video/mp4"></video>
         <p></p>
         <button type="button" class="resetfunny">Click to clear video</button>

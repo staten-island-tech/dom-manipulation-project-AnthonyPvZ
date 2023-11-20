@@ -1,0 +1,70 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image: url(zombie\ survival.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 62.5%;
+    justify-content: space-around;
+    color: whitesmoke;
+
+}
+
+.interactions {
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.7);
+    box-shadow: inset 0px 10px 25px 5px rgba(0, 0, 0, 0.7);
+    margin: 25 500 25;
+    padding: 20 20 20 20;
+}
+
+.interactions:hover {
+    outline: 5px solid purple;
+    color: purple;
+}
+
+.Outputs {
+    text-align: center;
+}
+
+#form {
+    font-size: 40px;
+    color: rgb(89, 202, 247);
+}
+
+#reset {
+    color: red;
+    background-color: black;
+}
+
+.first-name {
+    background-color: rgba(80, 80, 80, 0.7);
+
+}
+
+#submit {
+    color: rgb(51, 255, 0);
+    background-color: black;
+}
+
+#funny {
+    color: rgb(51, 255, 0);
+    background-color: black;
+}
+
+h1 {
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+h2 {
+    font-size: 25px;
+    color: antiquewhite;
+}
+
+.resetfunny {
+    color: red;
+    background-color: black;
+}
